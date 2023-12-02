@@ -1,0 +1,81 @@
+#include "linkedClient.h"
+
+
+bool linkedClient::hasClientID(int searchID) {
+    if (headPtr == nullptr) {
+        return false;
+    }
+    else {
+        //cout << "            (entered else)\n";
+        Node<Client>* tempPtr = headPtr;
+        while (tempPtr != nullptr) {
+            //cout << "== checking ID of: " << tempPtr->data.getClientName() << "\n";
+            if (tempPtr->data.getClientID() == searchID) {
+                return true;
+            }
+            else {
+                tempPtr = tempPtr->nextPtr;
+            }
+        }// end while
+        return false;
+    }
+}
+
+
+
+void linkedClient::addCommission(int clientID, int comisID) {
+    if (headPtr != nullptr) { // if the linked list isn't empty
+        Node<Client>* tempPtr = headPtr; 
+        while (tempPtr != nullptr) { 
+            if (tempPtr->data.getClientID() == clientID) { // if there is a clientID in the list that matches the clientID being searched for
+                tempPtr->data.addNewCommission(comisID); // add the commissionID to the Client's list of active commissions
+                break; // no need to check the rest of the list, there can only be one clientID
+            }
+            else { // else, continue the search
+                tempPtr = tempPtr->nextPtr;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS    should only take like 10 min
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
+// MAKE COMMENTS IN CODE WHILE SY DEISNGS THE COMMISSIONS CLASS
